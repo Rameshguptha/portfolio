@@ -332,7 +332,7 @@ export const projects = [
       "Husky",
       "CI/CD",
       "React Js",
-      "MongoDb",
+      "MongoDb",     
       "Node Js",
       "Express Js",
       "Redux",
