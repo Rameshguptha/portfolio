@@ -15,7 +15,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
-import { Bio, education, experiences, projects, skills } from "./data/constants.js";
+import { Bio, education, experiences, projects, skills, config } from "./data/constants.js";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -47,7 +47,7 @@ function App() {
       return;
     }
 
-    fetch(`http://localhost:5000/api/user/protfolio/data/uid/${pathSegment}`)
+    fetch(`${config.URL.SERVER_BASE_URL}/api/user/protfolio/data/uid/${pathSegment}`)
       .then(response => response.json())
       .then(data => {
         setData(data?.data || {});

@@ -1,3 +1,9 @@
+export const config = {
+  URL : {
+    SERVER_BASE_URL : 'http://api.protfolio.inviteall.tech'
+  }
+}
+
 export const Bio = {
   name: "Rishav Chanda",
   roles: [
