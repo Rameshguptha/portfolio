@@ -47,7 +47,15 @@ function App() {
       return;
     }
 
-    fetch(`${config.URL.SERVER_BASE_URL}/api/user/protfolio/data/uid/${pathSegment}`)
+    fetch(`${config.URL.SERVER_BASE_URL}/api/user/protfolio/data/uid/${pathSegment}`, {
+      method: 'GET', // or POST, PUT, DELETE, etc.
+      mode: 'cors', // enable CORS (this is the default)
+      credentials: 'include', // include cookies or other credentials (if needed)
+      headers: {
+        'Content-Type': 'application/json',
+        // Any other headers you need to set
+      }
+    })
       .then(response => response.json())
       .then(data => {
         setData(data?.data || {});
