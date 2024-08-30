@@ -1,6 +1,6 @@
 export const config = {
   URL : {
-    SERVER_BASE_URL : 'http://api.protfolio.inviteall.tech'
+    SERVER_BASE_URL : 'https://api.protfolio.inviteall.tech'
   }
 }
 
